@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+@media screen and (max-width: 720px) {
+  .lobby {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 50%;
+    transform: translate(0%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+html {
+  font-family: "Zen Dots", "share tech mono", sans-serif;
+}
+
+.glitch {
+  font-size: 30px;
+  margin-bottom: 4%;
+  font-weight: bold;
+  color: white;
+  text-shadow: -4px -4px 0 #F5624D, 4px 4px 0 #0F8a5F, 4px 4px 20px #0F8a5F,
+    -4px -4px 20px #F5624D, 0px 0px 20px yellow;
+  position: relative;
+}
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.glitch span:first-of-type {
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  z-index: -1;
+  animation: glitch steps(1) 3s infinite;
+}
+
+.glitch span:last-of-type {
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  animation: glitch steps(1) 2.3s infinite;
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0px);
+  }
+  55% {
+    transform: translate(0px) skew(20deg);
+  }
+  60% {
+    transform: translateX(8px);
+    color: transparent;
+  }
+  65% {
+    transform: translate(0px, 8px);
+    color: inherit;
+  }
+  90% {
+    transform: translate(8px, 8px) skew(-10deg);
+    color: #23232b;
+  }
+  100% {
+    transform: translate(8px, 8px);
+    color: inherit;
+  }
+}
+
+.typeStyle {
+    margin-top: 3%;
+    border-radius: 5px;
+    width: 60%;
+    height: 8%;
+    border: none;
+    font-size: 10px;
+    text-align: center;
+}
+
+.btn{
+    margin-top: 3%;
+    border-radius: 5px;
+    width: 60%;
+    height: 8%;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(135deg, #F5624D 10%, #CC231E 100%);
+    box-shadow: 0px 0px 50px 0px #F5624D;
+}
+
+#btn_main{
+  margin-top: 5%;
+  border-radius: 5px;
+  width: 20%;
+  height: 8%;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient(135deg, #535853 10%, #303532 70%);
+  box-shadow: 0px 0px 10px 0px #1b1d1c;
+}
+
+#funArea{
+    position: absolute;
+    top: 78%;
+    width: 100%;
+    height: 4.8%;
+    text-align: center;
+}
+
+.funStyly{
+  border-radius: 5px;
+  width: 20%;
+  height: 100%;
+  border: none;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient(135deg, #F5624D 10%, #CC231E 100%);
+  box-shadow: 0px 0px 50px 0px lightgoldenrodyellow;
+}
+
+input:focus {
+    border: none;
+}
+
+#statusbar{
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+    font-size: 2vh;
+    color: white;
+}
+
+#bingoCard{
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    width: 90%;
+    height: 45%;
+    border-collapse: collapse;
+    border: 5px black double;
+}
+tr{
+    width: 100%;
+}
+td{
+    background-color: rgba(78, 78, 78, 0.7);
+    margin: 0;
+    border: 1px black dashed;
+}
+.insideText{
+    position: relative;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 3px #CC231E, -3px -3px #0F8A5F;
+    font-size: 3.5vh;
+}
+.bingoNum{
+	font-style: italic;
+    font-size: 3.5vh;
+	text-transform: uppercase;
+	color: white;
+	-webkit-text-stroke: #fff;
+	-webkit-text-stroke-width: 1px;
+    text-shadow: 2px 3px #CC231E, -3px -3px #0F8A5F;
+	transition: all 0.5s ease-in-out;
+	text-align: center;
+	letter-spacing: 0.2em;
+	animation: flicker 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0.7;
+		text-shadow: 2px 2px 10px yellow;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px yellow;
+	}
+}
+
+#upperArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute; 
+    left: 50%; 
+    top: 15%; 
+    transform: translate(-50%, 0%);
+}
+
+.infoCss{
+    font-size: 1vh;
+    margin-top: 4%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px #CC231E, -1px -1px #0F8A5F;
+}
+
+#lineNumber{
+    font-size: 1.5vh;
+    position: absolute;
+    left: 50%;
+    top: 83%;
+    transform: translate(-50%,0);
+}
+}
+
